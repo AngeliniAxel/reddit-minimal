@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import './App.css';
+import './App.scss';
 import { fetchPosts } from './features/reddit/redditSlice';
 import { selectSearchTerm } from './features/searchTerm/searchTermSlice';
 

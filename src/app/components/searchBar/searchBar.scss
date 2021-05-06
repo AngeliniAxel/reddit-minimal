@@ -1,0 +1,27 @@
+.container {
+  top: 0;
+  position: fixed;
+  width: 1000px;
+  background-color: white;
+}
+
+.searchBar {
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 7px groove lightseagreen;
+}
+
+input {
+  height: 30px;
+  border: 3px groove lightseagreen;
+  outline: none;
+}
+
+button {
+  background-color: white;
+  margin-left: 4px;
+  height: 30px;
+  border: 3px groove lightseagreen;
+}

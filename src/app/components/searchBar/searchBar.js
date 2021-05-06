@@ -2,6 +2,8 @@ import { useDispatch } from 'react-redux';
 
 import { setSearchTerm } from '../../../features/searchTerm/searchTermSlice';
 
+import './searchBar.scss';
+
 const SearchBar = () => {
   const dispatch = useDispatch();
 
@@ -12,8 +14,8 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={onSearchTermChangeHandler}>
-      <div>
+    <form onSubmit={onSearchTermChangeHandler} className='container'>
+      <div className='searchBar'>
         <input
           type='search'
           id='search'
