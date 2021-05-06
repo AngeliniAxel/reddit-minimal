@@ -3,20 +3,24 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import './App.css';
 import { fetchPosts, selectPosts } from './features/reddit/redditSlice';
+import { selectSearchTerm } from './features/searchTerm/searchTermSlice';
+
+import SearchBar from './app/components/searchBar/searchBar';
 
 function App() {
   const dispatch = useDispatch();
+  const searchTerm = useSelector(selectSearchTerm);
 
   useEffect(() => {
-    dispatch(fetchPosts('meme'));
-  }, []);
+    dispatch(fetchPosts(searchTerm));
+  }, [searchTerm]);
 
   const posts = useSelector(selectPosts);
 
   return (
     <div className='App'>
-      {console.log(posts)}
-      <h2>{posts[0].title}</h2>
+      <SearchBar />
+      <h2>{searchTerm}</h2>
     </div>
   );
 }

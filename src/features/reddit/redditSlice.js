@@ -45,9 +45,10 @@ export const fetchReddit = async (term) => {
         };
         return postData;
       })
-    );
-
-  console.log(posts);
+    )
+    .catch(function (e) {
+      console.log('Hubo un problema con la petición Fetch:' + e.message);
+    });
 };
 
 export const redditSlice = createSlice({
