@@ -26,31 +26,6 @@ export const fetchPosts = createAsyncThunk(
   }
 );
 
-export const fetchReddit = async (term) => {
-  const posts = await fetch(`https://www.reddit.com/search.json?q=${term}`)
-    .then((res) => res.json())
-    .then((res) =>
-      res.data.children.map((item) => {
-        const postData = {
-          title: item.data.title,
-          author: item.data.author,
-          subreddit: item.data.subreddit,
-          url: item.data.url,
-          post_hint: item.data.post_hint,
-          thumbnailUrl: item.data.thumbnail,
-          id: item.data.id,
-          //ups: kFormatter(item.data.ups),
-          created_utc: item.data.created_utc,
-          //num_comments: kFormatter(item.data.num_comments),
-        };
-        return postData;
-      })
-    )
-    .catch(function (e) {
-      console.log('Hubo un problema con la petición Fetch:' + e.message);
-    });
-};
-
 export const redditSlice = createSlice({
   name: 'reddit',
   initialState: {
