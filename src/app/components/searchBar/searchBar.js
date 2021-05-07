@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 
 import { setSearchTerm } from '../../../features/searchTerm/searchTermSlice';
 
-import { Link, withRouter, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import './searchBar.scss';
 
