@@ -7,17 +7,20 @@ export const fetchPosts = createAsyncThunk(
       .then((res) => res.json())
       .then((res) =>
         res.data.children.map((item) => {
+          console.log(item);
           const postData = {
             title: item.data.title,
             author: item.data.author,
             subreddit: item.data.subreddit,
             url: item.data.url,
             post_hint: item.data.post_hint,
+            is_video: item.data.is_video,
+            permalink: item.data.permalink,
             thumbnailUrl: item.data.thumbnail,
             id: item.data.id,
-            //ups: kFormatter(item.data.ups),
+            ups: item.data.ups,
             created_utc: item.data.created_utc,
-            //num_comments: kFormatter(item.data.num_comments),
+            num_comments: item.data.num_comments,
           };
           return postData;
         })
