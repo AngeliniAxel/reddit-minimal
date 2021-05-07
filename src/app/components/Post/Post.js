@@ -5,7 +5,6 @@ const Post = ({ post }) => {
 
   return (
     <div>
-      {console.log(title)}
       <h1>{title}</h1>
       <h2>{author}</h2>
       <img src={url} height='200' width='200' alt='' />

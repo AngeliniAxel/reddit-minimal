@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.scss';
 import { fetchPosts } from './features/reddit/redditSlice';
 import { selectSearchTerm } from './features/searchTerm/searchTermSlice';
@@ -18,8 +20,12 @@ function App() {
 
   return (
     <div className='App'>
-      <SearchBar />
-      <Posts />
+      <Router>
+        <SearchBar />
+        <Switch>
+          <Route path='/posts' component={Posts} />
+        </Switch>
+      </Router>
     </div>
   );
 }
