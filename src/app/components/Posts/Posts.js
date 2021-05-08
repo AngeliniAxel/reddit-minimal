@@ -7,8 +7,12 @@ const Posts = () => {
   const posts = useSelector(selectPosts);
 
   return posts.map((post) => (
-    <Link to={`posts/${post.id}`} style={{ textDecoration: 'none' }}>
-      <Post post={post} key={post.id} />
+    <Link
+      to={`posts/${post.id}`}
+      style={{ textDecoration: 'none' }}
+      key={post.id}
+    >
+      <Post post={post} />
     </Link>
   ));
 };
