@@ -52,5 +52,8 @@ export const postSlice = createSlice({
 });
 
 export const selectPost = (state) => state.selectedPost.post;
+export const selectComments = (state) => state.selectedPost.comments;
+export const selectCommentsStatus = (state) =>
+  state.selectedPost.commentsStatus;
 export const { setPost, setComments } = postSlice.actions;
 export default postSlice.reducer;

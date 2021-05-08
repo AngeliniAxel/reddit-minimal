@@ -7,6 +7,7 @@ import {
   fetchComments,
 } from '../../../features/postSlice/postSlice';
 import Post from '../../components/Post/Post';
+import Comments from '../Comments/Comments';
 
 const IndividualPost = ({ match }) => {
   const id = match.params.id;
@@ -21,20 +22,11 @@ const IndividualPost = ({ match }) => {
   useEffect(() => {
     dispatch(fetchComments(post.permalink));
   }, [id]);
-  /*
-  const prueba = async () => {
-    const posts = await fetch(
-      `https://www.reddit.com/r/aww/comments/n53rq7/this_is_kabosu_shes_15_years_old_and_was_the.json`
-    ).then((res) => res.json());
-    return posts;
-  };
-
-  console.log(prueba());
-  */
 
   return (
     <div>
       <Post post={post} />
+      <Comments />
     </div>
   );
 };
