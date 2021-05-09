@@ -6,6 +6,7 @@ import {
   selectPostsStatus,
 } from '../../../features/reddit/redditSlice';
 import { Link } from 'react-router-dom';
+import NoResults from '../NoResults/NoResults';
 
 const Posts = () => {
   const posts = useSelector(selectPosts);
@@ -14,15 +15,20 @@ const Posts = () => {
   return (
     <div>
       {postsStatus == 'loading' && <Spinner />}
-      {posts.map((post) => (
-        <Link
-          to={`posts/${post.id}`}
-          style={{ textDecoration: 'none' }}
-          key={post.id}
-        >
-          <Post post={post} />
-        </Link>
-      ))}
+
+      {postsStatus == 'succeeded' && posts.length == 0 ? (
+        <NoResults />
+      ) : (
+        posts.map((post) => (
+          <Link
+            to={`posts/${post.id}`}
+            style={{ textDecoration: 'none' }}
+            key={post.id}
+          >
+            <Post post={post} />
+          </Link>
+        ))
+      )}
     </div>
   );
 };
