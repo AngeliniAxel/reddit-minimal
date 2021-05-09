@@ -15,7 +15,11 @@ const SearchBar = (props) => {
 
   const onSearchTermChangeHandler = (e) => {
     e.preventDefault();
-    const userInput = document.getElementById('search').value;
+    const userInput = [];
+    userInput.push(document.getElementById('search').value);
+    userInput.push(
+      document.querySelector('input[name="sortby"]:checked').value
+    );
     dispatch(setSearchTerm(userInput));
     document.getElementById('search').value = '';
     history.push('/posts');
@@ -39,12 +43,18 @@ const SearchBar = (props) => {
           <div className='sortBy'>Sort by:</div>
           <label className='container-radio'>
             <div className='radio-value'>Relevant</div>
-            <input type='radio' name='sortby' value='relevant' checked />
+            <input
+              type='radio'
+              name='sortby'
+              value='relevant'
+              checked
+              readOnly
+            />
             <span className='checkmark'></span>
           </label>
           <label className='container-radio'>
             <div className='radio-value'>Latest</div>
-            <input type='radio' name='sortby' value='new' />
+            <input type='radio' name='sortby' value='new' readOnly />
             <span className='checkmark'></span>
           </label>
         </div>

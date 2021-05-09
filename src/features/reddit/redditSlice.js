@@ -3,7 +3,11 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchPosts = createAsyncThunk(
   'reddit/fetchPosts',
   async (term) => {
-    const posts = await fetch(`https://www.reddit.com/search.json?q=${term}`)
+    const [input, sortby] = term;
+    console.log(term);
+    const posts = await fetch(
+      `https://www.reddit.com/search.json?q=${input}&sort=${sortby}`
+    )
       .then((res) => res.json())
       .then((res) =>
         res.data.children.map((item) => {
