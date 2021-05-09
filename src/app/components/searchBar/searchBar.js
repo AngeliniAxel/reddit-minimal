@@ -35,6 +35,19 @@ const SearchBar = (props) => {
         <button type='submit' value='submit'>
           <FontAwesomeIcon icon={faSearch} size='lg' />
         </button>
+        <div className='checkbox'>
+          <div className='sortBy'>Sort by:</div>
+          <label className='container-radio'>
+            <div className='radio-value'>Relevant</div>
+            <input type='radio' name='sortby' value='relevant' checked />
+            <span className='checkmark'></span>
+          </label>
+          <label className='container-radio'>
+            <div className='radio-value'>Latest</div>
+            <input type='radio' name='sortby' value='new' />
+            <span className='checkmark'></span>
+          </label>
+        </div>
       </div>
     </form>
   );
