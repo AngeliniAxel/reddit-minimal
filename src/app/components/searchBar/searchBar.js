@@ -4,6 +4,9 @@ import { setSearchTerm } from '../../../features/searchTerm/searchTermSlice';
 
 import { useHistory } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 import './searchBar.scss';
 
 const SearchBar = (props) => {
@@ -30,7 +33,7 @@ const SearchBar = (props) => {
           required
         />
         <button type='submit' value='submit'>
-          Search
+          <FontAwesomeIcon icon={faSearch} size='lg' />
         </button>
       </div>
     </form>
