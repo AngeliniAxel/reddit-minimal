@@ -16,7 +16,9 @@ function App() {
   const searchTerm = useSelector(selectSearchTerm);
 
   useEffect(() => {
-    dispatch(fetchPosts(searchTerm));
+    if (searchTerm.length > 1) {
+      dispatch(fetchPosts(searchTerm));
+    }
   }, [searchTerm]);
 
   return (
