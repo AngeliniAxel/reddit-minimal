@@ -4,7 +4,6 @@ export const fetchPosts = createAsyncThunk(
   'reddit/fetchPosts',
   async (term) => {
     const [input, sortby] = term;
-    console.log(term);
     const posts = await fetch(
       `https://www.reddit.com/search.json?q=${input}&sort=${sortby}`
     )
@@ -55,4 +54,5 @@ export const redditSlice = createSlice({
 });
 
 export const selectPosts = (state) => state.reddit.posts;
+export const selectPostsStatus = (state) => state.reddit.postsStatus;
 export default redditSlice.reducer;

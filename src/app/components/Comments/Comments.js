@@ -4,6 +4,7 @@ import {
   selectCommentsStatus,
 } from '../../../features/postSlice/postSlice';
 import Comment from './Comment';
+import Spinner from '../Spinner/Spinner';
 
 const Comments = () => {
   const comments = useSelector(selectComments);
@@ -11,6 +12,7 @@ const Comments = () => {
 
   return (
     <div>
+      {commentsStatus == 'loading' && <Spinner />}
       {commentsStatus == 'succeeded' &&
         comments.map((comment) => {
           if (comment.author !== undefined) {
