@@ -33,10 +33,13 @@ function App() {
         <SearchBar />
 
         <div className='wrapper'>
-          <Switch>
-            <Route path='/posts' exact component={Posts} />
-            <Route path='/posts/:id' component={IndividualPost} />
-          </Switch>
+          <div className='switch'>
+            <Switch>
+              <Route path='/posts' exact component={Posts} />
+              <Route path='/posts/:id' component={IndividualPost} />
+            </Switch>
+          </div>
+
           <Subreddit />
         </div>
       </Router>

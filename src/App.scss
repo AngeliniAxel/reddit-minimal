@@ -8,5 +8,9 @@ body {
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.switch {
+  margin: 0 auto;
 }
