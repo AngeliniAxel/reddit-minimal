@@ -26,40 +26,45 @@ const SearchBar = (props) => {
   };
 
   return (
-    <form onSubmit={onSearchTermChangeHandler} className='container'>
-      <div className='searchBar'>
-        {console.log(Math.random())}
-        <input
-          type='search'
-          id='search'
-          name='search'
-          placeholder='Search...'
-          required
-        />
-        <button type='submit' value='submit'>
-          <FontAwesomeIcon icon={faSearch} size='lg' />
-        </button>
-        <div className='checkbox'>
-          <div className='sortBy'>Sort by:</div>
-          <label className='container-radio'>
-            <div className='radio-value'>Relevant</div>
-            <input
-              type='radio'
-              name='sortby'
-              value='relevant'
-              checked
-              readOnly
-            />
-            <span className='checkmark'></span>
-          </label>
-          <label className='container-radio'>
-            <div className='radio-value'>Latest</div>
-            <input type='radio' name='sortby' value='new' readOnly />
-            <span className='checkmark'></span>
-          </label>
+    <div>
+      <h1 className='brand'>
+        Reddit<span className='minimal'>Minimal</span>
+      </h1>
+      <form onSubmit={onSearchTermChangeHandler} className='container'>
+        <div className='searchBar'>
+          {console.log(Math.random())}
+          <input
+            type='search'
+            id='search'
+            name='search'
+            placeholder='Search...'
+            required
+          />
+          <button type='submit' value='submit'>
+            <FontAwesomeIcon icon={faSearch} size='lg' />
+          </button>
+          <div className='checkbox'>
+            <div className='sortBy'>Sort by:</div>
+            <label className='container-radio'>
+              <div className='radio-value'>Relevant</div>
+              <input
+                type='radio'
+                name='sortby'
+                value='relevant'
+                checked
+                readOnly
+              />
+              <span className='checkmark'></span>
+            </label>
+            <label className='container-radio'>
+              <div className='radio-value'>Latest</div>
+              <input type='radio' name='sortby' value='new' readOnly />
+              <span className='checkmark'></span>
+            </label>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 
