@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 
-import { setSearchTerm } from '../../../features/searchTerm/searchTermSlice';
+import { setSearchTerm } from '../../../features/searchTermSlice/searchTermSlice';
 
 import { useHistory } from 'react-router-dom';
 

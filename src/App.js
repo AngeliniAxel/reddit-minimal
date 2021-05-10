@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.scss';
-import { fetchPosts } from './features/reddit/redditSlice';
-import { selectSearchTerm } from './features/searchTerm/searchTermSlice';
+import { fetchPosts } from './features/redditSlice/redditSlice';
+import { selectSearchTerm } from './features/searchTermSlice/searchTermSlice';
 
 import SearchBar from './app/components/SearchBar/searchBar';
 import Posts from './app/components/Posts/Posts';

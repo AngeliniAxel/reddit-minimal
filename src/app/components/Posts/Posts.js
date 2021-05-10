@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   selectPosts,
   selectPostsStatus,
-} from '../../../features/reddit/redditSlice';
+} from '../../../features/redditSlice/redditSlice';
 import { Link } from 'react-router-dom';
 import NoResults from '../NoResults/NoResults';
 
@@ -12,7 +12,17 @@ const Posts = () => {
   const posts = useSelector(selectPosts);
   const postsStatus = useSelector(selectPostsStatus);
 
-  return (
+  const subred = fetch('https://www.reddit.com/subreddits/.json')
+    .then((res) => res.json())
+    .then((res) => res.data.children);
+  console.log(subred);
+
+  /* const subred = fetch('https://www.reddit.com/r/AskReddit/.json')
+    .then((res) => res.json())
+    .then((res) => res.data.children);
+  console.log(subred); */
+
+  https: return (
     <div>
       {postsStatus == 'loading' && <Spinner />}
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectPosts } from '../../../features/reddit/redditSlice';
+import { selectPosts } from '../../../features/redditSlice/redditSlice';
 import {
   setPost,
   selectPost,

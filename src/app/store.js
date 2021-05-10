@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import redditSlice from '../features/reddit/redditSlice';
-import searchTermSlice from '../features/searchTerm/searchTermSlice';
+import redditSlice from '../features/redditSlice/redditSlice';
+import searchTermSlice from '../features/searchTermSlice/searchTermSlice';
 import postSlice from '../features/postSlice/postSlice';
 
 export const store = configureStore({

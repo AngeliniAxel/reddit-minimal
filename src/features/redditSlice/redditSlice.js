@@ -18,7 +18,6 @@ export const fetchPosts = createAsyncThunk(
             post_hint: item.data.post_hint,
             is_video: item.data.is_video,
             permalink: item.data.permalink,
-            thumbnailUrl: item.data.thumbnail,
             id: item.data.id,
             ups: item.data.ups,
             created_utc: item.data.created_utc,
