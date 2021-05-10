@@ -27,12 +27,11 @@ const SearchBar = (props) => {
 
   return (
     <div>
-      <h1 className='brand'>
-        Reddit<span className='minimal'>Minimal</span>
-      </h1>
       <form onSubmit={onSearchTermChangeHandler} className='container'>
         <div className='searchBar'>
-          {console.log(Math.random())}
+          <h1 className='brand'>
+            Reddit<span className='minimal'>Minimal</span>
+          </h1>
           <input
             type='search'
             id='search'

@@ -1,0 +1,23 @@
+ul {
+  margin-top: 0;
+  background-color: white;
+  padding-left: 0;
+  width: 220px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin: 2px;
+  border-bottom: 7px groove lightseagreen;
+  list-style: none;
+  height: 50px;
+  img {
+    margin: 0;
+    margin-left: 2px;
+  }
+  span {
+    margin-left: 10px;
+    flex-shrink: 1;
+  }
+}

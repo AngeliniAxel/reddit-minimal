@@ -5,3 +5,8 @@ body {
   max-width: 1000px;
   background-color: whitesmoke;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}

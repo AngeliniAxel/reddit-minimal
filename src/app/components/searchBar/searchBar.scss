@@ -1,8 +1,5 @@
 .brand {
-  position: fixed;
-  top: 20px;
-  left: 280px;
-  z-index: 1;
+  padding-right: 20%;
   font-size: 1.4rem;
   margin: 0;
   .minimal {
@@ -13,7 +10,8 @@
 .container {
   top: 0;
   position: fixed;
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
   background-color: white;
 }
 
@@ -22,6 +20,7 @@
   height: 70px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   border-bottom: 7px groove lightseagreen;
 }
 
