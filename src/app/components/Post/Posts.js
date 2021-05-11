@@ -1,4 +1,4 @@
-import Post from '../Post/Post';
+import Post from './Post';
 import Spinner from '../Spinner/Spinner';
 import { useSelector } from 'react-redux';
 import {
@@ -12,17 +12,7 @@ const Posts = () => {
   const posts = useSelector(selectPosts);
   const postsStatus = useSelector(selectPostsStatus);
 
-  const subred = fetch('https://www.reddit.com/subreddits/.json')
-    .then((res) => res.json())
-    .then((res) => res.data.children);
-  console.log(subred);
-
-  /* const subred = fetch('https://www.reddit.com/r/AskReddit/.json')
-    .then((res) => res.json())
-    .then((res) => res.data.children);
-  console.log(subred); */
-
-  https: return (
+  return (
     <div>
       {postsStatus == 'loading' && <Spinner />}
 

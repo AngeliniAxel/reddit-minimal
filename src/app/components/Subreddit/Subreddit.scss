@@ -1,5 +1,5 @@
 ul {
-  margin-top: 0;
+  margin-top: -6px;
   background-color: white;
   padding-left: 0;
   width: 220px;
@@ -8,8 +8,8 @@ ul {
 li {
   display: flex;
   align-items: center;
-  margin: 2px;
-  border-bottom: 7px groove lightseagreen;
+  margin: 0;
+  border-bottom: 6px groove lightseagreen;
   list-style: none;
   height: 50px;
   img {
@@ -20,4 +20,20 @@ li {
     margin-left: 10px;
     flex-shrink: 1;
   }
+}
+
+.noDecoration-button {
+  height: 103%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border: none;
+  width: 100%;
+  margin: 0;
+}
+
+.noDecoration-button:hover {
+  background-color: lightseagreen;
 }

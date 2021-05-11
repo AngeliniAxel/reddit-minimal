@@ -1,9 +1,17 @@
+.post-wrapper {
+  display: flex;
+  width: 100%;
+}
+
 .responsive {
   border-radius: 1%;
   border: 1px solid grey;
   margin: 5px;
   background-color: white;
   color: black;
+  width: 100%;
+  max-width: 750px;
+  overflow: scroll;
 }
 
 h3 {
