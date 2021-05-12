@@ -10,6 +10,8 @@ export const fetchPosts = createAsyncThunk(
       .then((res) => res.json())
       .then((res) =>
         res.data.children.map((item) => {
+          console.log(item.data.title);
+          console.log(item);
           const postData = {
             title: item.data.title,
             author: item.data.author,

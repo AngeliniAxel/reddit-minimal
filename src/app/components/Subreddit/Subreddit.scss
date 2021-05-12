@@ -3,37 +3,35 @@ ul {
   background-color: white;
   padding-left: 0;
   width: 220px;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  border-bottom: 6px groove lightseagreen;
-  list-style: none;
-  height: 50px;
-  img {
+  li {
+    display: flex;
+    align-items: center;
     margin: 0;
-    margin-left: 2px;
-  }
-  span {
-    margin-left: 10px;
-    flex-shrink: 1;
-  }
-}
+    border-bottom: 6px groove lightseagreen;
+    list-style: none;
+    height: 50px;
+    img {
+      margin: 0;
+      margin-left: 2px;
+    }
+    span {
+      margin-left: 10px;
+      flex-shrink: 1;
+    }
+    .noDecoration-button {
+      height: 103%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      color: black;
+      border: none;
+      width: 100%;
+      margin: 0;
+    }
 
-.noDecoration-button {
-  height: 103%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  color: black;
-  border: none;
-  width: 100%;
-  margin: 0;
-}
-
-.noDecoration-button:hover {
-  background-color: lightseagreen;
+    .noDecoration-button:hover {
+      background-color: lightseagreen;
+    }
+  }
 }

@@ -27,7 +27,10 @@ const SearchBar = (props) => {
 
   return (
     <div>
-      <form onSubmit={onSearchTermChangeHandler} className='container'>
+      <form
+        onSubmit={onSearchTermChangeHandler}
+        className='searchbar-container'
+      >
         <div className='searchBar'>
           <h1 className='brand'>
             Reddit<span className='minimal'>Minimal</span>

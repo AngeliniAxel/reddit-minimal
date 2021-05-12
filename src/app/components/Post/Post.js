@@ -22,13 +22,15 @@ const Post = ({ post }) => {
   } = post;
 
   return (
-    <div className='post-wrapper'>
-      {(post_hint == 'image' || post_hint == 'self') && (
-        <div className='responsive'>
+    <div>
+      {(post_hint === 'image' || post_hint === 'self') && (
+        <div className='post-container'>
           <h3>{title}</h3>
-          <div className='imgContainer'>
-            {post_hint == 'image' && <img src={url} alt='image from user' />}
-          </div>
+          {post_hint === 'image' && (
+            <div className='imgContainer'>
+              <img src={url} alt='posted by user' />
+            </div>
+          )}
           <div className='info'>
             <h4>
               <span className='detail'>Posted by</span> {author}

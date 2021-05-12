@@ -1,45 +1,45 @@
-.brand {
-  padding-right: 20%;
-  font-size: 1.4rem;
-  margin: 0;
-  .minimal {
-    color: lightseagreen;
-  }
-}
-
-.container {
+.searchbar-container {
   top: 0;
   position: fixed;
   max-width: 1000px;
   width: 100%;
   background-color: white;
-}
 
-.searchBar {
-  display: flex;
-  height: 70px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 7px groove lightseagreen;
-}
+  .searchBar {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 7px groove lightseagreen;
 
-input {
-  height: 30px;
-  border: 3px groove lightseagreen;
-  outline: none;
-}
+    .brand {
+      padding-right: 20%;
+      font-size: 1.4rem;
+      margin: 0;
+      .minimal {
+        color: lightseagreen;
+      }
+    }
 
-button {
-  background-color: lightseagreen;
-  color: white;
-  margin-left: 4px;
-  height: 30px;
-  border: 3px groove lightseagreen;
-}
-button:hover {
-  background-color: rgb(23, 122, 117);
-  cursor: pointer;
+    input {
+      height: 30px;
+      border: 3px groove lightseagreen;
+      outline: none;
+    }
+
+    button {
+      background-color: lightseagreen;
+      color: white;
+      margin-left: 4px;
+      height: 30px;
+      border: 3px groove lightseagreen;
+    }
+    button:hover {
+      background-color: rgb(23, 122, 117);
+      cursor: pointer;
+    }
+  }
 }
 
 .checkbox {
@@ -48,44 +48,44 @@ button:hover {
   cursor: pointer;
   margin-right: 10px;
   margin-left: 10px;
-}
 
-.sortBy {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.container-radio {
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  .sortBy {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-}
 
-.radio-value {
-  margin-right: 5px;
-}
+  .container-radio {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  }
+
+  .radio-value {
+    margin-right: 5px;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
 }
 
 .container-radio:hover input ~ .checkmark {

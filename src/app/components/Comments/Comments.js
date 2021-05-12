@@ -12,11 +12,13 @@ const Comments = () => {
 
   return (
     <div>
-      {commentsStatus == 'loading' && <Spinner />}
-      {commentsStatus == 'succeeded' &&
+      {commentsStatus === 'loading' && <Spinner />}
+      {commentsStatus === 'succeeded' &&
         comments.map((comment) => {
           if (comment.author !== undefined) {
             return <Comment comment={comment} key={comment.id} />;
+          } else {
+            return '';
           }
         })}
     </div>

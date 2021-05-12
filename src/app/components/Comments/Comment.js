@@ -5,14 +5,14 @@ const Comment = ({ comment }) => {
   const { author, body, id, created_utc } = comment;
 
   return (
-    <div className='responsive'>
+    <div className='comment-container'>
       <div className='author'>
         <h4>
           {author}
           <span className='detail'> says</span>
         </h4>
       </div>
-      <p className='body'>{body}</p>
+      <p className='body-text'>{body}</p>
     </div>
   );
 };

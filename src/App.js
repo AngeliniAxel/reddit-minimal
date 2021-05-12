@@ -12,7 +12,6 @@ import Posts from './app/components/Post/Posts';
 import IndividualPost from './app/components/IndividualPost/IndividualPost';
 import { fetchSubreddit } from './features/subredditSlice/subredditSlice';
 import Subreddit from './app/components/Subreddit/Subreddit';
-import SubredditPosts from './app/components/SubredditPosts/SubredditPosts';
 
 function App() {
   const dispatch = useDispatch();
@@ -38,7 +37,6 @@ function App() {
             <Switch>
               <Route path='/posts' exact component={Posts} />
               <Route path='/posts/:id' exact component={IndividualPost} />
-              <Route path='/subreddit/:id' exact component={SubredditPosts} />
             </Switch>
           </div>
 

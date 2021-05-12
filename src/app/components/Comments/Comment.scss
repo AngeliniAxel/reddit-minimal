@@ -1,16 +1,23 @@
-.author {
-  margin-left: 5px;
+.comment-container {
+  border-radius: 1%;
+  border: 1px solid rgb(226, 226, 226);
+  margin: 5px 10px;
+  background-color: white;
+  color: black;
 
-  h4 {
-    margin: 5px;
-    font-size: 1.4rem;
-    span {
-      font-size: 1.2rem;
+  .author {
+    margin-left: 5px;
+
+    h4 {
+      margin: 5px;
+      font-size: 1.4rem;
+      span {
+        font-size: 1.2rem;
+      }
     }
   }
-}
 
-.body {
-  margin: 10px 50px;
-  font-size: 1.2rem;
+  .body-text {
+    margin-left: 50px;
+  }
 }

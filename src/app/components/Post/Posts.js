@@ -13,20 +13,18 @@ const Posts = () => {
   const postsStatus = useSelector(selectPostsStatus);
 
   return (
-    <div>
-      {postsStatus == 'loading' && <Spinner />}
+    <div className='posts-wrapper'>
+      {postsStatus === 'loading' && <Spinner />}
 
-      {postsStatus == 'succeeded' && posts.length == 0 ? (
+      {postsStatus === 'succeeded' && posts.length === 0 ? (
         <NoResults />
       ) : (
         posts.map((post) => (
-          <Link
-            to={`posts/${post.id}`}
-            style={{ textDecoration: 'none' }}
-            key={post.id}
-          >
-            <Post post={post} />
-          </Link>
+          <div key={post.id}>
+            <Link to={`posts/${post.id}`} style={{ textDecoration: 'none' }}>
+              <Post post={post} />
+            </Link>
+          </div>
         ))
       )}
     </div>

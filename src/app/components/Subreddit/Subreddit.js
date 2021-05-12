@@ -4,6 +4,7 @@ import { fetchPostsFromSubreddit } from '../../../features/redditSlice/redditSli
 import { useHistory } from 'react-router-dom';
 
 import './Subreddit.scss';
+import { useEffect } from 'react';
 
 const Subreddit = () => {
   const subreddits = useSelector(selectSubreddits);
@@ -14,6 +15,11 @@ const Subreddit = () => {
     dispatch(fetchPostsFromSubreddit(e.target.id));
     history.push('/posts');
   };
+
+  useEffect(() => {
+    history.push('/posts');
+    dispatch(fetchPostsFromSubreddit('/r/home/'));
+  }, []);
 
   return (
     <div>
@@ -26,7 +32,12 @@ const Subreddit = () => {
               id={item.url}
             >
               {item.icon_img !== '' && (
-                <img id={item.url} src={item.icon_img} width='25px' />
+                <img
+                  id={item.url}
+                  alt='icon'
+                  src={item.icon_img}
+                  width='25px'
+                />
               )}{' '}
               <span id={item.url}>{item.title}</span>
             </button>
