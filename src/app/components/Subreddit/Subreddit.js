@@ -31,7 +31,7 @@ const Subreddit = () => {
               className='noDecoration-button'
               id={item.url}
             >
-              {item.icon_img !== '' && (
+              {item.icon_img !== '' && item.icon_img !== null && (
                 <img
                   id={item.url}
                   alt='icon'

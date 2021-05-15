@@ -14,6 +14,7 @@ const Post = ({ seeBody, post }) => {
     url,
     post_hint,
     is_video,
+    media,
     selftext,
     permalink,
     thumbnailUrl,
@@ -44,6 +45,13 @@ const Post = ({ seeBody, post }) => {
         {post_hint === 'rich:video' && (
           <div className='media-container'>
             <YouTube className='video' videoId={youTubeGetID(url)} />
+          </div>
+        )}
+        {post_hint === 'hosted:video' && (
+          <div className='media-container'>
+            <video className='self-video' controls aria-label={title}>
+              <source type='video/mp4' src={media} />
+            </video>
           </div>
         )}
         {selftext && (
