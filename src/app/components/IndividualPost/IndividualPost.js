@@ -27,7 +27,7 @@ const IndividualPost = ({ match }) => {
 
   return (
     <div className='individual-container'>
-      <Post post={post} />
+      <Post seeBody={true} post={post} />
       <Comments />
     </div>
   );

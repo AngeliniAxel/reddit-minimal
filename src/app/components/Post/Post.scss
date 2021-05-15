@@ -4,13 +4,15 @@
   margin: 5px 10px;
   background-color: white;
   color: black;
+  display: flex;
+  flex-direction: column;
 
   h3 {
     font-size: 1.4rem;
     margin: 5px 10px;
   }
 
-  .imgContainer {
+  .media-container {
     display: flex;
     justify-content: center;
   }
@@ -19,6 +21,20 @@
     height: auto;
     max-width: 80%;
     margin: 5px 10px;
+  }
+
+  .video {
+    max-width: 95%;
+    margin: 5px 10px;
+  }
+
+  .selftext {
+    margin: 5px 15px;
+    font-size: 0.95rem;
+  }
+
+  a {
+    margin: 5px 15px;
   }
 
   .info {

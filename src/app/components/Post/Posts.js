@@ -22,7 +22,7 @@ const Posts = () => {
         posts.map((post) => (
           <div key={post.id}>
             <Link to={`posts/${post.id}`} style={{ textDecoration: 'none' }}>
-              <Post post={post} />
+              <Post seeBody={false} post={post} />
             </Link>
           </div>
         ))
