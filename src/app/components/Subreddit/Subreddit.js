@@ -16,11 +16,6 @@ const Subreddit = () => {
     history.push('/posts');
   };
 
-  useEffect(() => {
-    history.push('/posts');
-    dispatch(fetchPostsFromSubreddit('/r/home/'));
-  }, []);
-
   return (
     <div>
       <ul>

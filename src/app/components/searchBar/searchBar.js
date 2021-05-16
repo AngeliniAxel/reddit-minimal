@@ -25,6 +25,13 @@ const SearchBar = (props) => {
     history.push('/posts');
   };
 
+  const handleSubredditClick = (e) => {
+    e.preventDefault();
+    history.location.pathname !== '/subreddit'
+      ? history.push('/subreddit')
+      : history.goBack();
+  };
+
   return (
     <div>
       <form
@@ -64,6 +71,13 @@ const SearchBar = (props) => {
               <span className='checkmark'></span>
             </label>
           </div>
+          <button
+            className='subreddit-button'
+            onClick={handleSubredditClick}
+            type='button'
+          >
+            Subreddit
+          </button>
         </div>
       </form>
     </div>

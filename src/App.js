@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -12,9 +13,11 @@ import Posts from './app/components/Post/Posts';
 import IndividualPost from './app/components/IndividualPost/IndividualPost';
 import { fetchSubreddit } from './features/subredditSlice/subredditSlice';
 import Subreddit from './app/components/Subreddit/Subreddit';
+import { fetchPostsFromSubreddit } from './features/redditSlice/redditSlice';
 
 function App() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const searchTerm = useSelector(selectSearchTerm);
 
   useEffect(() => {
@@ -25,6 +28,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchSubreddit());
+    dispatch(fetchPostsFromSubreddit('/r/home/'));
   }, []);
 
   return (
@@ -37,6 +41,7 @@ function App() {
             <Switch>
               <Route path='/posts' exact component={Posts} />
               <Route path='/posts/:id' exact component={IndividualPost} />
+              <Route path='/subreddit' exact component={Subreddit} />
             </Switch>
           </div>
 

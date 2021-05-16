@@ -5,6 +5,10 @@
   width: 100%;
   background-color: white;
 
+  .subreddit-button {
+    display: none;
+  }
+
   .searchBar {
     display: flex;
     height: 70px;
@@ -109,4 +113,10 @@
   height: 15px;
   border-radius: 50%;
   background: lightseagreen;
+}
+
+@media screen and (max-width: 950px) {
+  .subreddit-button {
+    display: block !important;
+  }
 }
