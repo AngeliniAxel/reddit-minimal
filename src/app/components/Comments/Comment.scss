@@ -18,9 +18,14 @@
       }
     }
   }
+  .wrapper-body {
+    display: flex;
+    justify-content: flex-start;
+  }
 
   .body-text {
-    margin-left: 50px !important;
+    margin: 5px auto;
+    flex-grow: 1;
   }
 }
 
@@ -28,11 +33,16 @@
   .body-text {
     max-width: 550px !important;
     overflow-x: scroll;
-    margin: auto !important;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .body-text {
+    max-width: 500px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
   .body-text {
     max-width: 300px !important;
   }
