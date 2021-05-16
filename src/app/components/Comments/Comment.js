@@ -2,7 +2,7 @@ import React from 'react';
 import './Comment.scss';
 
 const Comment = ({ comment }) => {
-  const { author, body, id, created_utc } = comment;
+  const { author, body } = comment;
 
   return (
     <div className='comment-container'>

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import YouTube from 'react-youtube';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,14 +14,8 @@ const Post = ({ seeBody, post }) => {
     subreddit,
     url,
     post_hint,
-    is_video,
     media,
     selftext,
-    permalink,
-    thumbnailUrl,
-    id,
-    ups,
-    created_utc,
     num_comments,
   } = post;
 
@@ -37,16 +32,19 @@ const Post = ({ seeBody, post }) => {
     <div>
       <div className='post-container'>
         <h3>{title}</h3>
+
         {post_hint === 'image' && (
           <div className='media-container'>
             <img src={url} alt='posted by user' />
           </div>
         )}
+
         {post_hint === 'rich:video' && (
           <div className='media-container'>
             <YouTube className='video' videoId={youTubeGetID(url)} />
           </div>
         )}
+
         {post_hint === 'hosted:video' && (
           <div className='media-container'>
             <video className='self-video' controls aria-label={title}>
@@ -54,16 +52,19 @@ const Post = ({ seeBody, post }) => {
             </video>
           </div>
         )}
+
         {selftext && (
           <p className='selftext'>
             {seeBody ? selftext : shortenBody(selftext)}
           </p>
         )}
+
         {!post_hint && !selftext && subreddit !== 'AskReddit' && (
           <a href={url} target='_blank'>
             Click to see more
           </a>
         )}
+
         <div className='info'>
           <h4>
             <span className='detail'>Posted by</span> {author}

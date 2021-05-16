@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { selectSubreddits } from '../../../features/subredditSlice/subredditSlice';
-import { fetchPostsFromSubreddit } from '../../../features/redditSlice/redditSlice';
 import { useHistory } from 'react-router-dom';
 
+import { selectSubreddits } from '../../../features/subredditSlice/subredditSlice';
+import { fetchPostsFromSubreddit } from '../../../features/redditSlice/redditSlice';
+
 import './Subreddit.scss';
-import { useEffect } from 'react';
 
 const Subreddit = () => {
   const subreddits = useSelector(selectSubreddits);

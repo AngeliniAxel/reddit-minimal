@@ -1,7 +1,7 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { selectSearchTerm } from '../../../features/searchTermSlice/searchTermSlice';
-import { useSelector } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSadTear } from '@fortawesome/free-solid-svg-icons';

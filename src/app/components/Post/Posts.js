@@ -1,11 +1,13 @@
-import Post from './Post';
-import Spinner from '../Spinner/Spinner';
+import { Link } from 'react-router-dom';
+
 import { useSelector } from 'react-redux';
 import {
   selectPosts,
   selectPostsStatus,
 } from '../../../features/redditSlice/redditSlice';
-import { Link } from 'react-router-dom';
+
+import Post from './Post';
+import Spinner from '../Spinner/Spinner';
 import NoResults from '../NoResults/NoResults';
 
 const Posts = () => {

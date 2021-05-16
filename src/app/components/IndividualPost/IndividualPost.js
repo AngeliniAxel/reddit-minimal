@@ -9,14 +9,12 @@ import {
 import Post from '../../components/Post/Post';
 import Comments from '../Comments/Comments';
 
-import './IndividualPost.scss';
-
 const IndividualPost = ({ match }) => {
   const id = match.params.id;
   const posts = useSelector(selectPosts);
   const dispatch = useDispatch();
-  const postArray = posts.filter((post) => post.id === id);
 
+  const postArray = posts.filter((post) => post.id === id);
   dispatch(setPost(postArray[0]));
 
   const post = useSelector(selectPost);

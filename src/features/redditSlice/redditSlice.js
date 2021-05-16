@@ -10,8 +10,6 @@ export const fetchPosts = createAsyncThunk(
       .then((res) => res.json())
       .then((res) =>
         res.data.children.map((item) => {
-          console.log(item.data.title);
-          console.log(item);
           const postData = {
             title: item.data.title,
             author: item.data.author,
@@ -19,7 +17,6 @@ export const fetchPosts = createAsyncThunk(
             url: item.data.url,
             post_hint: item.data.post_hint,
             is_video: item.data.is_video,
-            media: item.data.media.reddit_video.scrubber_media_url,
             selftext: item.data.selftext,
             permalink: item.data.permalink,
             id: item.data.id,
@@ -27,6 +24,8 @@ export const fetchPosts = createAsyncThunk(
             created_utc: item.data.created_utc,
             num_comments: item.data.num_comments,
           };
+          if (item.data.post_hint === 'hosted:video' && item.data.media)
+            postData.media = item.data.media.reddit_video.scrubber_media_url;
           return postData;
         })
       );
@@ -41,8 +40,6 @@ export const fetchPostsFromSubreddit = createAsyncThunk(
       .then((res) => res.json())
       .then((res) =>
         res.data.children.map((item) => {
-          console.log(item.data.title);
-          console.log(item);
           const postData = {
             title: item.data.title,
             author: item.data.author,

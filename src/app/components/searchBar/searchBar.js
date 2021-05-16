@@ -1,8 +1,7 @@
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import { setSearchTerm } from '../../../features/searchTermSlice/searchTermSlice';
-
-import { useHistory } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -43,6 +42,7 @@ const SearchBar = (props) => {
             Reddit<span className='minimal'>Minimal</span>
           </h1>
           <input
+            className='input-search'
             type='search'
             id='search'
             name='search'
