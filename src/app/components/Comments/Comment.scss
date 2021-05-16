@@ -20,6 +20,20 @@
   }
 
   .body-text {
-    margin-left: 50px;
+    margin-left: 50px !important;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .body-text {
+    max-width: 550px !important;
+    overflow-x: scroll;
+    margin: auto !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .body-text {
+    max-width: 300px !important;
   }
 }

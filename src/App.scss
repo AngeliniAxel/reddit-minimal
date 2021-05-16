@@ -11,7 +11,30 @@ body {
   justify-content: flex-end;
   margin: auto;
   width: 100%;
+
   .switch {
     margin: 0 auto;
+  }
+}
+
+.subreddit-button {
+  background-color: lightseagreen;
+  color: white;
+  margin-left: 4px;
+  height: 30px;
+  border: 3px groove lightseagreen;
+}
+.subreddit-button:hover {
+  background-color: rgb(23, 122, 117);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+  .wrapper {
+  }
+  .subreddit-component {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
   }
 }

@@ -40,7 +40,9 @@ function App() {
             </Switch>
           </div>
 
-          <Subreddit />
+          <div className='subreddit-component'>
+            <Subreddit />
+          </div>
         </div>
       </Router>
     </div>

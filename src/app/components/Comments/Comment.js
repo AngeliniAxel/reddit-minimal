@@ -12,7 +12,9 @@ const Comment = ({ comment }) => {
           <span className='detail'> says</span>
         </h4>
       </div>
-      <p className='body-text'>{body}</p>
+      <div className='wrapper-body'>
+        <p className='body-text'>{body}</p>
+      </div>
     </div>
   );
 };
