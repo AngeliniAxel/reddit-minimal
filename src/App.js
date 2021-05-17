@@ -9,7 +9,7 @@ import {
 import { selectSearchTerm } from './features/searchTermSlice/searchTermSlice';
 import { fetchSubreddit } from './features/subredditSlice/subredditSlice';
 
-import SearchBar from './app/components/SearchBar/searchBar';
+import SearchBar from './app/components/SearchBar/SearchBar';
 import Posts from './app/components/Post/Posts';
 import IndividualPost from './app/components/IndividualPost/IndividualPost';
 
