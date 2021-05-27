@@ -20,29 +20,28 @@ export const fetchSubreddit = createAsyncThunk(
   }
 );
 
-export const subredditSlice = createSlice({
-  name: 'subreddit',
+export const subredditsSlice = createSlice({
+  name: 'subreddits',
   initialState: {
-    subreddits: [],
-    subredditsStatus: '',
+    list: [],
+    status: '',
   },
 
   extraReducers: {
     //Reducers for fetching posts
     [fetchSubreddit.pending]: (state, action) => {
-      state.subredditsStatus = 'loading';
+      state.status = 'loading';
     },
     [fetchSubreddit.fulfilled]: (state, action) => {
-      state.subredditsStatus = 'succeeded';
-      state.subreddits = action.payload;
+      state.status = 'succeeded';
+      state.list = action.payload;
     },
     [fetchSubreddit.rejected]: (state, action) => {
-      state.subredditsStatus = 'failed';
+      state.status = 'failed';
     },
   },
 });
 
-export const selectSubreddits = (state) => state.subreddit.subreddits;
-export const selectSubredditsStatus = (state) =>
-  state.subreddit.subredditsStatus;
-export default subredditSlice.reducer;
+export const selectSubreddits = (state) => state.subreddits.list;
+export const selectSubredditsStatus = (state) => state.subreddits.status;
+export default subredditsSlice.reducer;

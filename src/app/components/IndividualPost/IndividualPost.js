@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectPosts } from '../../../features/redditSlice/redditSlice';
+import { selectPosts } from '../../../features/postsSlice/postsSlice';
 import {
   setPost,
   selectPost,
@@ -14,8 +14,9 @@ const IndividualPost = ({ match }) => {
   const posts = useSelector(selectPosts);
   const dispatch = useDispatch();
 
-  const postArray = posts.filter((post) => post.id === id);
-  dispatch(setPost(postArray[0]));
+  const postArray = posts.find((post) => post.id === id);
+
+  dispatch(setPost(postArray));
 
   const post = useSelector(selectPost);
 

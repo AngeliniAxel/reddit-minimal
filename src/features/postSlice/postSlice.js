@@ -16,7 +16,6 @@ export const fetchComments = createAsyncThunk(
           return comment;
         })
       );
-    console.log(comments);
     return comments;
   }
 );

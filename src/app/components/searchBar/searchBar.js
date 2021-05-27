@@ -15,7 +15,7 @@ const SearchBar = (props) => {
   const onSearchTermChangeHandler = (e) => {
     e.preventDefault();
     const userInput = [];
-    userInput.push(document.getElementById('search').value);
+    userInput.push(encodeURIComponent(document.getElementById('search').value));
     userInput.push(
       document.querySelector('input[name="sortby"]:checked').value
     );

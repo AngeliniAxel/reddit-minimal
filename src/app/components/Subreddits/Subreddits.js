@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-import { selectSubreddits } from '../../../features/subredditSlice/subredditSlice';
-import { fetchPostsFromSubreddit } from '../../../features/redditSlice/redditSlice';
+import { selectSubreddits } from '../../../features/subredditsSlice/subredditsSlice';
+import { fetchPostsFromSubreddit } from '../../../features/postsSlice/postsSlice';
 
-import './Subreddit.scss';
+import './Subreddits.scss';
 
-const Subreddit = () => {
+const Subreddits = () => {
   const subreddits = useSelector(selectSubreddits);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -43,4 +43,4 @@ const Subreddit = () => {
   );
 };
 
-export default Subreddit;
+export default Subreddits;

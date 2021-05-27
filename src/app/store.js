@@ -1,14 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import redditSlice from '../features/redditSlice/redditSlice';
+import postsSlice from '../features/postsSlice/postsSlice';
 import searchTermSlice from '../features/searchTermSlice/searchTermSlice';
 import postSlice from '../features/postSlice/postSlice';
-import subredditSlice from '../features/subredditSlice/subredditSlice';
+import subredditsSlice from '../features/subredditsSlice/subredditsSlice';
 
 export const store = configureStore({
   reducer: {
-    reddit: redditSlice,
+    posts: postsSlice,
     searchTerm: searchTermSlice,
     selectedPost: postSlice,
-    subreddit: subredditSlice,
+    subreddits: subredditsSlice,
   },
 });

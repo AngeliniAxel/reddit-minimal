@@ -5,15 +5,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   fetchPosts,
   fetchPostsFromSubreddit,
-} from './features/redditSlice/redditSlice';
+} from './features/postsSlice/postsSlice';
 import { selectSearchTerm } from './features/searchTermSlice/searchTermSlice';
-import { fetchSubreddit } from './features/subredditSlice/subredditSlice';
+import { fetchSubreddit } from './features/subredditsSlice/subredditsSlice';
 
-import SearchBar from './app/components/searchBar/searchBar';
+import SearchBar from './app/components/SearchBar/SearchBar';
 import Posts from './app/components/Post/Posts';
 import IndividualPost from './app/components/IndividualPost/IndividualPost';
 
-import Subreddit from './app/components/Subreddit/Subreddit';
+import Subreddits from './app/components/Subreddits/Subreddits';
 
 import './App.scss';
 
@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchSubreddit());
-    dispatch(fetchPostsFromSubreddit('/r/home/'));
+    dispatch(fetchPostsFromSubreddit('/r/all/'));
   }, []);
 
   return (
@@ -43,12 +43,12 @@ function App() {
               <Route path='/' exact component={Posts} />
               <Route path='/posts' exact component={Posts} />
               <Route path='/posts/:id' exact component={IndividualPost} />
-              <Route path='/subreddit' exact component={Subreddit} />
+              <Route path='/subreddit' exact component={Subreddits} />
             </Switch>
           </div>
 
           <div className='subreddit-component'>
-            <Subreddit />
+            <Subreddits />
           </div>
         </div>
       </Router>

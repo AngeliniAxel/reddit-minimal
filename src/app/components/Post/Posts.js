@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   selectPosts,
   selectPostsStatus,
-} from '../../../features/redditSlice/redditSlice';
+} from '../../../features/postsSlice/postsSlice';
 
 import Post from './Post';
 import Spinner from '../Spinner/Spinner';

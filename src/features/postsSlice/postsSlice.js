@@ -63,38 +63,38 @@ export const fetchPostsFromSubreddit = createAsyncThunk(
   }
 );
 
-export const redditSlice = createSlice({
-  name: 'reddit',
+export const postsSlice = createSlice({
+  name: 'posts',
   initialState: {
-    posts: [],
-    postsStatus: '',
+    list: [],
+    status: '',
   },
 
   extraReducers: {
     //Reducers for fetching posts
     [fetchPosts.pending]: (state, action) => {
-      state.postsStatus = 'loading';
+      state.status = 'loading';
     },
     [fetchPosts.fulfilled]: (state, action) => {
-      state.postsStatus = 'succeeded';
-      state.posts = action.payload;
+      state.status = 'succeeded';
+      state.list = action.payload;
     },
     [fetchPosts.rejected]: (state, action) => {
-      state.postsStatus = 'failed';
+      state.status = 'failed';
     },
     [fetchPostsFromSubreddit.pending]: (state, action) => {
-      state.postsStatus = 'loading';
+      state.status = 'loading';
     },
     [fetchPostsFromSubreddit.fulfilled]: (state, action) => {
-      state.postsStatus = 'succeeded';
-      state.posts = action.payload;
+      state.status = 'succeeded';
+      state.list = action.payload;
     },
     [fetchPostsFromSubreddit.rejected]: (state, action) => {
-      state.postsStatus = 'failed';
+      state.status = 'failed';
     },
   },
 });
 
-export const selectPosts = (state) => state.reddit.posts;
-export const selectPostsStatus = (state) => state.reddit.postsStatus;
-export default redditSlice.reducer;
+export const selectPosts = (state) => state.posts.list;
+export const selectPostsStatus = (state) => state.posts.status;
+export default postsSlice.reducer;
